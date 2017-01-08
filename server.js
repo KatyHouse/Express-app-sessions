@@ -58,7 +58,7 @@ app.post('/users/login/process', function (req, res) {
 });
 app.get('/users/logout', function (req, res) {
     req.session.destroy();
-    res.send("logout success!");
+    res.redirect('/login');
 });
 
 app.get('/users/profile', auth, function (req, res) {
