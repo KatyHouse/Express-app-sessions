@@ -49,16 +49,16 @@ app.post('/users/login/process', function (req, res) {
             res.redirect('/users/profile');
         }else{
             console.log("wrong password");
-            res.redirect('/login');
+            res.redirect('/users/login');
         }
     }else{
         console.log("wrong username");
-        res.redirect('/login');
+        res.redirect('/users/login');
     }
 });
-app.get('/users/logout', function (req, res) {
+app.get('/logout', function (req, res) {
     req.session.destroy();
-    res.redirect('/login');
+    res.redirect('/users/login');
 });
 
 app.get('/users/profile', auth, function (req, res) {
