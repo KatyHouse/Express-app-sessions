@@ -1,0 +1,18 @@
+//
+   Created by Kate on 08.01.2017.
+extends ../node_modules/jade-bootstrap/_bootstrap
+block body
+    div.container
+        h1="List of users"
+        div.row
+            div.col-md-6
+                table.table.table-striped
+                    thead
+                        tr
+                            th="login"
+                            th="password"
+                    tbody
+                    each val in usersList
+                        tr
+                            td=val
+                            td=usersList[val]
