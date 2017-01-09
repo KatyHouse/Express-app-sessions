@@ -27,12 +27,6 @@ app.get('/', function (req, res) {
     res.redirect('/users');
 });
 app.get('/users', function(req, res){
-    // var users = fs.readFile('./users.json', function (err, data) {
-    //     if (err) throw err;
-    //     obj = JSON.parse(data);
-    //     console.log(obj);
-    // });
-    console.log(u);
     res.render('index', { title: 'List of Users', usersList: u });
 });
 app.get('/users/login', function (req, res) {
